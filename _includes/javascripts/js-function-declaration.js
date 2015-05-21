@@ -2,9 +2,10 @@ function doSomething(item) {
     // do something
 }
 
+// good
 var doSomething = function (item) {
     // do something
-}
+};
 
 
 // Good
@@ -20,7 +21,7 @@ var value = (function() {
     // function body
     return {
         message: "Hi"
-    }
+    };
 }());
 
 

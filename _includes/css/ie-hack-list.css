@@ -1,0 +1,8 @@
+ selector {
+     property: value;     /* 所有浏览器 */
+     property: value\9;   /* 所有IE浏览器 */
+     property: value\0;   /* IE8 */
+     +property: value;    /* IE7 */
+     _property: value;    /* IE6 */
+     *property: value;    /* IE6-7 */
+ }
