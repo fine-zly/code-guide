@@ -13,7 +13,7 @@ layout: nil
   src: url('font/fontello.eot#iefix') format('embedded-opentype'),
        url('font/fontello.woff') format('woff'),
        url('font/fontello.ttf') format('truetype'),
-       url('font/fontello.svg') format('svg');
+       url('font/fontello.svg#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,7 +26,6 @@ layout: nil
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
   text-align: center;
   font-variant: normal;
   text-transform: none;
@@ -34,6 +33,7 @@ layout: nil
 
 .icon-github-circled:before { content: '\e800'; } /* '' */
 .icon-twitter:before { content: '\e801'; } /* '' */
+.icon-category:before { content: '\e802'; } /* '' */
 
 
 /*
@@ -254,6 +254,7 @@ pre code {
   padding: 3rem 1rem;
   font-size: 90%;
   text-align: center;
+  clear: both;
 }
 .footer p {
   margin-bottom: .5rem;
@@ -265,6 +266,66 @@ pre code {
 }
 .quick-links li {
   display: inline;
+}
+
+/*
+ * 自定义
+ */
+.sections {
+  width: 200%;
+}
+.section-single {
+  float: left;
+  width: 50%;
+}
+
+nav {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.nav-btn {
+  font-size: 1.5rem;
+}
+
+.nav-content {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -moz-transition: all .5s ease-in 0.3s;
+  -webkit-transition: all .5s ease-in 0.3s;
+  -o-transition: all .5s ease-in 0.3s;
+  transition: height .5s ease-in 0.3s;
+}
+.nav-content li {
+  margin: 0;
+  list-style-type: none;
+}
+.nav-content.active {
+  height: 48px;
+  height: 3rem;
+}
+
+@media (min-width: 48em) {
+
+  nav {
+    padding: 2rem;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-content {
+    height: auto;
+    margin-left: -10px;
+  }
+  .nav-content li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
 }
 
 

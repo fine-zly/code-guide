@@ -5,5 +5,10 @@
 <script>
     $(function() {
         $("#toTop").scrollToTop();
+
+        $('.nav-btn').on('click', function (e) {
+            $('.nav-content').toggleClass('active');
+            e.preventDefault();
+        });
     });
 </script>
