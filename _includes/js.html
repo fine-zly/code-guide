@@ -1,13 +1,31 @@
-<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-<script src="javascripts/jquery.scrollToTop.js"></script>
+<script src="javascripts/jquery-1.11.3.min.js"></script>
 
 <script>
     $(function() {
-        $("#toTop").scrollToTop();
+        var
+            $navContent = $('.nav-content'),
+            $sections = $('.sections'),
+            $sectionsChildren = $sections.children();
 
         $('.nav-btn').on('click', function (e) {
-            $('.nav-content').toggleClass('active');
+            $navContent.toggleClass('active');
+            e.preventDefault();
+        });
+
+        $navContent.on('click', 'a', function (e) {
+            var
+                $parent = $(this).parent(),
+                index = $parent.index(),
+                x = -50 * index + "%";
+
+            $sections.css({
+                '-webkit-transform': 'translate3d(' + x + ', 0, 0)',
+                'transform': 'translate3d(' + x + ', 0, 0)'
+            });
+
+            $sectionsChildren.removeClass('active');
+            $sectionsChildren.eq(index).addClass('active');
+
             e.preventDefault();
         });
     });
