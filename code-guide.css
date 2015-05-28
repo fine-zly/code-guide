@@ -349,7 +349,11 @@ nav {
   .section-single .section, .section-single .heading {
     display: none;
   }
-  .section-single.active .section, .section-single.active .heading {
+  .section-single.active .section {
+    display: table;
+  }
+
+  .section-single.active .heading {
     display: block;
   }
 }
