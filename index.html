@@ -6,7 +6,7 @@ layout: default
     <a class="nav-btn" href="#"><span class="icon icon-category"></span></a>
     <ul class="nav-content">
         <li><a href="#section1">规范</a></li>
-        <li><a href="#section2">代码片段</a></li>
+        <li><a href="#section2">常见问题</a></li>
     </ul>
 </nav>
 
@@ -419,7 +419,83 @@ layout: default
     </div>
     <div class="section-single section2" id="section2">
         <div class="heading-title" id="toc2">
-            <h2>CSS</h2>
+            <h2>常见问题</h2>
+        </div>
+        
+        <div class="section" id="project-naming">
+            <div class="col">
+                <p>CSS中写透明度的时候opacity:0.8; 兼容不到IE7、IE8</p>
+                <p>解决方案：<code>后面加上这行filter:alpha(opacity=80);</code></p>
+                <p>IE使用私有属性filter:alpha(opacity)，Moz Family使用私有属性-moz-opacity，而标准的属性是opacity（CSS 3, Moz Family部分支持CSS3）。</p>
+            </div>
+            <div class="col">
+                {% highlight javascript %}{% include css/filter-opacity.css %}{% endhighlight %}
+            </div>
+        </div>
+
+        <div class="section" id="folder-naming">
+            <div class="col">
+                <p>测试输入数据测试的时候，会输入很多连贯数字或者字母，造成区块内的文字不换行溢出，如图：<img src="images/1.png" width="349" height="66" /></p>
+                <p>解决方案：<code> word-break:break-all;  （值：normal、break-all、kepp-all）</code></p>
+                <p><code>注意：</code>word-break:break-all;样式属性只对英文长字符串有效。</p>
+                <p>拓展：white-space  规定段落中的文本不进行换行</p>
+                <p><img src="images/2.png" width="725" height="198" /></p>
+                <p>word-wrap   允许长单词换行到下一行</p>
+                <p><img src="images/3.png" width="720" height="94" /></p>
+            </div>
+            <div class="col">
+                {% highlight javascript %}{% include css/code-word-break.css %}{% endhighlight %}
+            </div>
+        </div>
+        
+        <div class="section" id="folder-naming">
+            <div class="col">
+                <p>在table里当td为空时，个别浏览器不显示td的边线，如图：<img src="images/tab.png" width="100" height="63" /></p>
+                <p>解决方案：给table的td加个<code>empty-cells:show; </code>或者在td里面加空格 <code>&nbsp;</code></p>
+            </div>
+            <div class="col">
+                
+            </div>
+        </div>
+        
+        <div class="section" id="folder-naming">
+            <div class="col">
+                <p>需要实现如图半透明黑色区块效果<img src="images/4.png" width="256" height="151" />一般大家都会写：background:#000; opacity:0.7;filter:alpha(opacity=70); 但是区块 内的内容也呈现了半透明效果</p>
+                <p>解决方案：用<code>1*1px的半透明png图片</code>平铺代替背景色值</p>
+                <p><a href="demo.html" target="_blank">点击查看效果</a></p>
+            </div>
+            <div class="col">
+                
+            </div>
+        </div>
+        
+        <div class="section" id="folder-naming">
+            <div class="col">
+                <p>样式表里除了注释不允许出现中文，例如：<code>font-family:'微软雅黑';</code></p>
+                <p>解决方案：根据下面的表，查找中文字体对应的英文名称。<img src="images/5.jpg" width="875" height="938" /></p>
+            </div>
+            <div class="col">
+                
+            </div>
+        </div>
+        
+        <div class="section" id="folder-naming">
+            <div class="col">
+                <p>清除浮动的时候，不再用父级结束标签上面加&lt;div class="clear"&gt;&lt;/div&gt;，而是直接在父级元素上加 class=”clearfix”</p>
+            </div>
+            <div class="col">
+                {% highlight javascript %}{% include css/clear-fix.css %}{% endhighlight %}
+            </div>
+        </div>
+        
+        
+        <div class="section" id="folder-naming">
+            <div class="col">
+                <p>输入框input的问题</p>
+            </div>
+            <div class="col">
+                {% highlight javascript %}{% include css/input-style.css %}{% endhighlight %}
+            </div>
         </div>
     </div>
 </div>

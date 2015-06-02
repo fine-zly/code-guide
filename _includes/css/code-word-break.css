@@ -1,0 +1,8 @@
+
+
+
+.code-wordbreak{
+	width:200px;
+	border:1px #c1c1c1 solid;
+	word-break:break-all;
+}

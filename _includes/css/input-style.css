@@ -1,0 +1,12 @@
+/* CSS Document */
+
+.input-style{
+	height:30px;
+	line-height:30px;
+	/*设置光标垂直居中*/
+	vertical-align:middle;
+	/*如果设置输入框无边框，建议使用0，none在ie6下无效。*/
+	border:0;
+	
+	/* 其他属性 */
+}

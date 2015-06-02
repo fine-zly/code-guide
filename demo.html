@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1 ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <link href="ico/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+        <title>图片上显示半透明标题效果</title>
+
+        <style>
+			.demo {
+				position: relative;
+				display: block;
+				height:137px;
+				width: 232px;
+				margin:40px 20px 0 30px;
+				text-align:center;
+				border:none;
+				}
+			.demo .ttxt{				
+				position: absolute;
+				bottom: 0;
+				left: 1px;
+				background:#000;
+				width: 230px;
+				opacity:0.5;
+				_moz-opacity:0.5;
+				filter:Alpha(opacity=50);
+				z-index:99;
+				}
+			.demo .ttxt span{
+				font-family:'微软雅黑';
+				font-size:14px;
+				font-weight:bold;
+				color: #fff;
+				line-height:30px;
+				}
+        	.demo1 {
+				position: relative;
+				display: block;
+				height:137px;
+				width: 232px;
+				margin:40px 20px 0 30px;
+				text-align:center;
+				border:0;
+				}
+			.demo1 .ttxt1{
+				background:url(images/222.png) repeat;
+				position: absolute;
+				bottom: 0;
+				left: 1px;
+				width: 230px;
+				z-index:99;
+				}
+			.demo1 .ttxt1 span{
+				font-family:'微软雅黑';
+				font-size:14px;
+				font-weight:bold;
+				color: #fff;
+				line-height:30px;
+				}
+        </style>
+    </head>
+    <body>
+    <h4>使用透明度的效果</h4>
+	<div class="demo">
+    	<img src="images/hyfwimg_03.png"/><div class="ttxt"><span>专场技术交流会</span></div>
+    </div>
+    
+    <br />
+    <br />
+    <h4>使用1*1px的半透明png图片平铺的效果</h4>
+    <div class="demo1">
+    	<img src="images/hyfwimg_03.png"/><div class="ttxt1"><span>专场技术交流会</span></div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+/* CSS Document */
+
+.filter-opacity{
+	/* 标准属性 */
+	opacity:0.5;
+	
+	/* Moz + FF */
+	-moz-opacity: 0.5;
+	
+	/* IE */
+	filter:Alpha(opacity=50);
+	
+	/* 其他属性 */
+}
