@@ -2,22 +2,6 @@
 
 <script>
 
-	var ie = (function(){
-	 
-		var undef,
-			v = 3,
-			div = document.createElement('div'),
-			all = div.getElementsByTagName('i');
-	 
-		while (
-			div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
-			all[0]
-		);
-	 
-		return v > 4 ? v : undef;
-	 
-	}());
-
     $(function() {
         var
             $navContent = $('.nav-content'),
@@ -33,28 +17,17 @@
             var
                 $parent = $(this).parent(),
                 index = $parent.index(),
-                x;
+                x = -50 * index + "%";
 			
-			if (ie === 9) {
-				x = -100 * index + "%";
-				$sections.animate({
-					'left': x,
-				});
-			} else {
-				x = -50 * index + "%";
 				$sections.css({
 					'-webkit-transform': 'translate(' + x + ', 0)',
 					'msTransform': 'translate(' + x + ', 0)',
 					'transform': 'translate(' + x + ', 0)'
 				});
-			}
 
             $sectionsChildren.removeClass('active');
             $sectionsChildren.eq(index).addClass('active');
 
-			if (ie < 9) {
-				return;
-			}
             e.preventDefault();
         });
     });
