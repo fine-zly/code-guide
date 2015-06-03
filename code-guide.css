@@ -313,6 +313,219 @@ nav {
   height: 3rem;
 }
 
+.word-b{
+    width:200px;
+	margin:0 auto;
+	height:100px;
+	border:1px #c1c1c1 solid;
+}
+.word-break-all{
+	width:200px;
+	margin:10px auto 0 10px;
+	height:100px;
+	border:1px #c1c1c1 solid;
+	word-break:break-all;
+	}
+	
+.tab{
+	width:90%;
+	font-size:12px;
+	border-top:1px #aaaaaa solid;
+	border-bottom:1px #aaaaaa solid;
+	border-left:1px #aaaaaa solid;
+	color:#000;
+}
+.tab thead{
+	height:30px;
+	background:#d5d5d5;
+	line-height:30px;
+}
+.tab thead th{
+	border-right:1px #aaaaaa solid;
+	text-align:left;
+	padding-left:5px;
+}
+.tab td{
+	height:30px;
+	background:#efefef;
+	border-top:1px #aaaaaa solid;
+	border-right:1px #aaaaaa solid;
+	padding-left:5px;
+}
+
+.demo {
+	position: relative;
+	display: block;
+	height:137px;
+	width: 232px;
+	margin:0 auto 0 30px;
+	text-align:center;
+	border:none;
+}
+.demo .ttxt{				
+	position: absolute;
+	bottom: 0;
+	left: 1px;
+	background:#000;
+	width: 230px;
+	opacity:0.5;
+	_moz-opacity:0.5;
+	filter:Alpha(opacity=50);
+	z-index:99;
+}
+.demo .ttxt span{
+	font-family:'微软雅黑';
+	font-size:14px;
+	font-weight:bold;
+	color: #fff;
+	line-height:30px;
+}
+/* 字体样式 */
+.f-stxihei{
+	font-family:'STHeiti Light';
+	font-size:14px;
+}
+.f-stheiti{
+	font-family:'STHeiti';
+	font-size:14px;
+}
+.f-STKaiti{
+	font-family:'STKaiti';
+	font-size:14px;
+}
+.f-STSong{
+	font-family:'STSong';
+	font-size:14px;
+}
+.f-STFangsong{
+	font-family:'STFangsong';
+	font-size:14px;
+}
+.f-LiHei{
+	font-family:'LiHei Pro Medium';
+	font-size:14px;
+}
+.f-LiSong{
+	font-family:'LiSong Pro Light';
+	font-size:14px;
+}
+.f-BiauKai{
+	font-family:'BiauKai';
+	font-size:14px;
+}
+.f-LiGothic{
+	font-family:'Apple LiGothic Medium';
+	font-size:14px;
+}
+.f-LiSung{
+	font-family:'Apple LiSung Light';
+	font-size:14px;
+}
+.f-PMingLiU{
+	font-family:'PMingLiU';
+	font-size:14px;
+}
+.f-MingLiU{
+	font-family:'MingLiU';
+	font-size:14px;
+}
+.f-DFKai{
+	font-family:'DFKai-SB';
+	font-size:14px;
+}
+.f-SimHei{
+	font-family:'SimHei';
+	font-size:14px;
+}
+.f-SimSun{
+	font-family:'SimSun';
+	font-size:14px;
+}
+.f-NSimSun{
+	font-family:'NSimSun';
+	font-size:14px;
+}
+.f-FangSong{
+	font-family:'FangSong';
+	font-size:14px;
+}
+.f-KaiTi{
+	font-family:'KaiTi';
+	font-size:14px;
+}
+.f-FangSong_GB2312{
+	font-family:'FangSong_GB2312';
+	font-size:14px;
+}
+.f-KaiTi_GB2312{
+	font-family:'KaiTi_GB2312';
+	font-size:14px;
+}
+.f-JhengHei{
+	font-family:'Microsoft JhengHei';
+	font-size:14px;
+}
+.f-YaHei{
+	font-family:'Microsoft YaHei';
+	font-size:14px;
+}
+.f-LiSu{
+	font-family:'LiSu';
+	font-size:14px;
+}
+.f-YouYuan{
+	font-family:'YouYuan';
+	font-size:14px;
+}
+.f-STZhongsong{
+	font-family:'STZhongsong';
+	font-size:14px;
+}
+.f-FZShuTi{
+	font-family:'FZShuTi';
+	font-size:14px;
+}
+.f-FZYaoti{
+	font-family:'FZYaoti';
+	font-size:14px;
+}
+.f-STCaiyun{
+	font-family:'STCaiyun';
+	font-size:14px;
+}
+.f-STHupo{
+	font-family:'STHupo';
+	font-size:14px;
+}
+.f-STLiti{
+	font-family:'STLiti';
+	font-size:14px;
+}
+.f-STXingkai{
+	font-family:'STXingkai';
+	font-size:14px;
+}
+.f-STXinwei{
+	font-family:'STXinwei';
+	font-size:14px;
+}
+
+.bor-all{
+	border:1px #000 solid;
+}
+.bor-top{
+	border-top:2px #000 solid;
+}
+.bor-left{
+	border-left:2px #000 solid;
+}
+.bor-right{
+	border-right:2px #000 solid;
+}
+.bor-bottom{
+	border-bottom:2px #000 solid;
+}
+
 @media (min-width: 48em) {
 
   nav {

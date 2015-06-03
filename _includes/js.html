@@ -1,6 +1,7 @@
 <script src="javascripts/jquery-1.11.3.min.js"></script>
 
 <script>
+
     $(function() {
         var
             $navContent = $('.nav-content'),
@@ -17,11 +18,12 @@
                 $parent = $(this).parent(),
                 index = $parent.index(),
                 x = -50 * index + "%";
-
-            $sections.css({
-                '-webkit-transform': 'translate3d(' + x + ', 0, 0)',
-                'transform': 'translate3d(' + x + ', 0, 0)'
-            });
+			
+				$sections.css({
+					'-webkit-transform': 'translate(' + x + ', 0)',
+					'msTransform': 'translate(' + x + ', 0)',
+					'transform': 'translate(' + x + ', 0)'
+				});
 
             $sectionsChildren.removeClass('active');
             $sectionsChildren.eq(index).addClass('active');
@@ -29,4 +31,5 @@
             e.preventDefault();
         });
     });
+	
 </script>
