@@ -1,0 +1,18 @@
+/* CSS Document */
+
+.filter-3D{
+	position:relative;
+	top:23px;
+	left:218px;
+	width:500px;
+	height:500px;
+	background:#f6f6f6;
+	/*  去除inline-block产生的空白  */
+	font-size:0;
+	letter-spacing: -4px;/*根据不同字体字号或许需要做一定的调整*/
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}

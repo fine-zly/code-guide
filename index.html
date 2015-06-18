@@ -429,7 +429,7 @@ layout: default
                 <p>IE使用私有属性filter:alpha(opacity)，Moz Family使用私有属性-moz-opacity，而标准的属性是opacity（CSS 3, Moz Family部分支持CSS3）。</p>
             </div>
             <div class="col">
-                {% highlight javascript %}{% include css/filter-opacity.css %}{% endhighlight %}
+                {% highlight css %}{% include css/filter-opacity.css %}{% endhighlight %}
             </div>
         </div>
 
@@ -487,7 +487,7 @@ layout: default
                 </table>
             </div>
             <div class="col">
-                {% highlight javascript %}{% include css/code-word-break.css %}{% endhighlight %}
+                {% highlight css %}{% include css/code-word-break.css %}{% endhighlight %}
                 <div class="word-break-all">This is a veryveryveryveryveryveryveryvery long word.</div>
             </div>
         </div>
@@ -747,7 +747,7 @@ layout: default
                 <p>清除浮动的时候，不再用父级结束标签上面加&lt;div class="clear"&gt;&lt;/div&gt;，而是直接在父级元素上加 class=”clearfix”</p>
             </div>
             <div class="col">
-                {% highlight javascript %}{% include css/clear-fix.css %}{% endhighlight %}
+                {% highlight css %}{% include css/clear-fix.css %}{% endhighlight %}
             </div>
         </div>
         
@@ -756,7 +756,7 @@ layout: default
                 <p>输入框input的问题</p>
             </div>
             <div class="col">
-                {% highlight javascript %}{% include css/input-style.css %}{% endhighlight %}
+                {% highlight css %}{% include css/input-style.css %}{% endhighlight %}
             </div>
         </div>
         
@@ -793,6 +793,30 @@ layout: default
         <div class="section" id="css-files">
             <div class="col">
                 <p>HTML文件夹下分images、css、js，公用样式提出来，写在common.css文件里，其他css文件是否一个页面建一个css文件，视情况而定。</p>
+            </div>
+        </div>
+        
+        <div class="section" id="css-files">
+            <div class="col">
+                <p>ie8及以下不支持3D旋转特效问题</p>
+                <p><a href="filter-3D-demo.html" target="_blank">DEMO</a></p>
+            </div>
+            <div class="col">
+                {% highlight css %}{% include css/filter-3D.css %}{% endhighlight %}
+                <p>js实现ie8兼容</p>
+                {% highlight javascript %}{% include javascripts/filter-3D.js %}{% endhighlight %}
+                <p>css实现ie8兼容</p>
+                {% highlight html %}{% include html/filter-3D.html %}{% endhighlight %}
+            </div>
+        </div>
+        
+        <div class="section" id="css-files">
+            <div class="col">
+                <p>ie8及以下不支持圆角特效问题</p>
+                <p><code>注意：设置容器圆角的样式一定要放在页面head之间（经测试，放在css文件里面，再引用到页面，在ie8及以下无效，具体什么原因还不清楚）。</code></p>
+            </div>
+            <div class="col">
+                {% highlight html %}{% include html/road.html %}{% endhighlight %}
             </div>
         </div>
     </div>

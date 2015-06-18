@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>嘉宾陪你聊峰会</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="styles/reset.css"/>
+<link rel="stylesheet" type="text/css" href="styles/chat.css"/>
+</head>
+
+<body>
+<div class="chat-main">    
+    <!--嘉宾陪你聊峰会    开始-->
+    <div class="chat-jiabin-list clearfix">
+        <div class="box-list">
+            <div class="box-img"></div>
+            <div class="sanjiao-x"></div>
+            <div class="box-img"></div>
+            <div class="sanjiao-x"></div>
+        </div>
+        <div class="box-list">
+            <div class="sanjiao-s"></div>
+            <div class="box-img"></div>
+            <div class="sanjiao-s"></div>
+            <div class="box-img"></div>
+        </div>
+        
+        <div class="box-list">
+            <div class="box-img"></div>
+            <div class="sanjiao-x"></div>
+            <div class="box-img"></div>
+            <div class="sanjiao-x"></div>
+        </div>
+        <div class="box-list">
+            <div class="sanjiao-s"></div>
+            <div class="box-img"></div>
+            <div class="sanjiao-s"></div>
+            <div class="box-img"></div>
+        </div>
+    </div>
+    
+    <div class="mh-introduce">
+        <div class="w-img">
+            <a href="#"><img src="images/img_25.png" width="92" height="120" /></a>
+        </div>
+    
+        <div class="w">
+            <h4>马宏</h4>
+            <p>互联网+融资租赁：走向消费金融的模式创新</p>
+        </div>
+    
+        <div class="w-wah-img">
+            <a href="#"><img src="images/img_38.png" width="104" height="120" /></a>
+        </div>
+    
+        <div class="w-wah">
+            <h4>王爱华</h4>
+            <p>适应经济发展新常态 实现建筑产业现代化</p>
+        </div>
+    
+        <div class="w-sh-img">
+            <a href="#"><img src="images/img_20.png" width="102" height="114" /></a>
+        </div>
+    
+        <div class="w-sh">
+            <h4>孙晖</h4>
+            <p>信息技术助力施工现场智能管理</p>
+        </div>
+    
+        <div class="w-zxf-img">
+            <a href="#"><img src="images/img-09.png" width="99" height="108" /></a>
+        </div>
+    
+        <div class="w-zxf">
+            <h4>赵雪峰</h4>
+            <p>BIM人才能力组成与培养模式探讨</p>
+        </div>
+    
+        <div class="w-wjw-img">
+            <a href="#"><img src="images/img_17.png" width="99" height="108" /></a>
+        </div>
+    
+        <div class="w-wjw">
+            <h4>吴纪文</h4>
+            <p>大数据对中介咨询企业在招投标阶段的影响和应用探索</p>
+        </div>
+    
+        <div class="w-lg-img">
+            <a href="#"><img src="images/img_29.png" width="94" height="112" /></a>
+        </div>
+    
+        <div class="w-lg">
+            <h4>刘刚</h4>
+            <p>互联网时代，房企如何应对未来市场竞争</p>
+        </div>
+    
+        <div class="w-wt-img">
+            <a href="#"><img src="images/img_11.png" width="130" height="113" /></a>
+        </div>
+    
+        <div class="w-wt">
+            <h4>吴涛</h4>
+            <p>适应经济发展“新常态”  突出转型升级关键点，积极务实推进建筑产业现代化</p>
+        </div>
+    
+        <div class="w-lsy-img">
+            <a href="#"><img src="images/img_15.png" width="92" height="112" /></a>
+        </div>
+    
+        <div class="w-lsy">
+            <h4>梁士毅</h4>
+            <p>"互联网+" 上的BIM+</p>
+        </div>
+    </div>
+    <!--嘉宾陪你聊峰会    结束-->
+</div> 
+<script type="text/javascript" src="javascripts/jquery.rotate.js"></script>
+<script type="text/javascript">
+$(function(){
+	var param = {
+		right: $("#rotRight"),
+		left: $("#rotLeft"),
+		box: $(".chat-jiabin-list"),
+		rot: 0
+	};
+	var fun = {
+		right: function(){
+			param.rot += 90;
+			$(".chat-jiabin-list").rotate(param.rot);
+			if(param.rot === 270){
+				param.rot = -90;	
+			}
+			return false;
+		},
+		left: function(){
+			param.rot -= 90;
+			if(param.rot === -90){
+				param.rot = 270;	
+			}
+			$(".chat-jiabin-list").rotate(param.rot);			
+			return false;
+		}
+	};
+	param.right.click(function(){
+		if(!$("img#rotImg").length){
+			param.box.html('<img id="rotImg" src="http://image.zhangxinxu.com/image/study/s/s512/mm1.jpg" />');
+		}
+		fun.right();
+		return false;
+	});
+	param.left.click(function(){
+		if(!$("img#rotImg").length){
+			param.box.html('<img id="rotImg" src="http://image.zhangxinxu.com/image/study/s/s512/mm1.jpg" />');
+		}
+		fun.left();
+		return false;
+	});		   
+});
+</script>   
+</body>
+</html>
